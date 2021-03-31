@@ -2,7 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc4ef2fe-9205-47b4-add4-60aabb22a257" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Project description.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MainPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/MainPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/HomePage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/HomePageController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/LoginPage.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/LoginPageController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/RegisterAdmin.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/RegisterAdminController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/RegisterCustomer.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/RegisterCustomerController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AdminLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HomePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HomePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Login.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegisterAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegisterAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegisterCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegisterCustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/HomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HomePage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/RegisterAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/RegisterAdmin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/RegisterCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/RegisterCustomer.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +62,35 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.other" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\Ecran\MyProjects\Java\PaymentManagementApp\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Client">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Client" />
+      <module name="PaymentManagementApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="PaymentManagementApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -52,10 +105,59 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="499" y="142" key="chooseDestDirectoryDialog" timestamp="1615997556784">
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1616513655095">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="499" y="142" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1615997556784" />
+    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1616513655095" />
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1616774452216">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1616774452216" />
+    <state x="462" y="105" key="FileChooserDialogImpl" timestamp="1616673699779">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1616673699779" />
+    <state width="1323" height="124" key="GridCell.Tab.0.bottom" timestamp="1616778780681">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="124" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1616778780681" />
+    <state width="1323" height="124" key="GridCell.Tab.0.center" timestamp="1616778780681">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="124" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1616778780681" />
+    <state width="1323" height="124" key="GridCell.Tab.0.left" timestamp="1616778780681">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="124" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1616778780681" />
+    <state width="1323" height="124" key="GridCell.Tab.0.right" timestamp="1616778780681">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="124" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1616778780681" />
+    <state x="499" y="142" key="chooseDestDirectoryDialog" timestamp="1616768934170">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="499" y="142" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1616768934170" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1616879005862">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1616879005862" />
+    <state x="65" y="59" key="new project wizard" timestamp="1616673702164">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="59" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1616673702164" />
   </component>
 </project>

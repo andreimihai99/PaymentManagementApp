@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 
 import java.io.FileInputStream;
 
-public class Main extends Application {
+public class Client extends Application {
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader();
         String fxmlPath = "src/main/resources/HomePage.fxml";

@@ -1,2 +1,2 @@
-public class MainPageController {
+public class MainPageAdminController {
 }

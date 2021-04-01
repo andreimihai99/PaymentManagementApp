@@ -13,9 +13,10 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import javax.swing.*;
 import java.io.*;
 
-public class RegisterAdminController{
+public class RegisterAdminController extends Register{
 
     @FXML
     private PasswordField passwordField;
@@ -38,8 +39,10 @@ public class RegisterAdminController{
     @FXML
     private Button backButton;
 
+    private String adminHome = "src/main/resources/MainPageAdmin.fxml";
+
     @FXML
-    void backButtonAction(ActionEvent event) throws IOException {
+    void backButtonAction(ActionEvent event, String filename) throws IOException {
         Stage newStage = new Stage();
         Node source = (Node)  event.getSource();
         Stage stage  = (Stage) source.getScene().getWindow();
@@ -47,7 +50,7 @@ public class RegisterAdminController{
         //Create the FXMLLoader
         FXMLLoader loader = new FXMLLoader();
         //Path to the FXML File
-        String fxmlDocPath = "src/main/resources/HomePage.fxml";
+        String fxmlDocPath = filename;
         FileInputStream fxmlStream = new FileInputStream(fxmlDocPath);
 
         //Create the Pane and all Details
@@ -61,57 +64,47 @@ public class RegisterAdminController{
     }
 
     @FXML
-    public void clickRegisterAdmin(ActionEvent event) throws IOException {
-        if(checkCorrectForm() == 4){
-            addingToJSON();
+    public void clickRegisterAdmin(ActionEvent event) throws IOException, ParseException {
+        String filename = "src/main/resources/userData.json";
+        if(checkCorrectForm(nameField.getText(), surnameField.getText(), emailField.getText(), passwordField.getText()) == 0) {
+            if (checkUniqueUser(nameField.getText(), surnameField.getText(), emailField.getText(), filename) == 0) {
+                addingToJSON();
+                goToHomePage(event, adminHome);
+            } else infoBox("Customer already exists!", "Warning");
         }
-        else
-            System.out.println("Incorrect form");
-    }
-
-    public int checkCorrectForm(){
-        int value = 0;
-        if(nameField.getText() != null)
-            value += 1;
-        if(surnameField.getText() != null)
-            value += 1;
-        if(emailField.getText() != null)
-            value += 1;
-        if(passwordField.getText() != null)
-            value += 1;
-        return value;
+        else infoBox("Incorrect credentials!", "Warning");
     }
 
     public void addingToJSON(){
-        int emptyDB = 0;
         JSONObject userInfo = new JSONObject();
-        JSONObject jObjFinal = new JSONObject();
+        JSONObject userInfoFinal = new JSONObject();
         userInfo.put("name", nameField.getText());
         userInfo.put("surname", surnameField.getText());
         userInfo.put("email",emailField.getText());
         userInfo.put("password", passwordField.getText());
+        userInfo.put("key", keyField.getText());
+        userInfo.put("role","admin");
 
-        JSONParser jParser = new JSONParser();
-        try{
-            JSONObject jObject = (JSONObject)jParser.parse(new FileReader("src/main/resources/data.json"));
-            JSONArray jArray = (JSONArray)jObject.get("UserInfo");
+        JSONParser jsonParser = new JSONParser();
 
-            if(jArray.isEmpty())
-                emptyDB = 1;
-            else
-                jArray.add(userInfo);
+        try {
+            JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader("src/main/resources/userData.json"));
+            JSONArray userArray = (JSONArray) jsonObject.get("UserInfo");
 
+            userArray.add(userInfo);
             try {
-                FileWriter file = new FileWriter("src/main/resources/data.json");
-                jObjFinal.put("UserInfo", jArray);
-                file.write(jObjFinal.toJSONString());
+                FileWriter file = new FileWriter("src/main/resources/userData.json");
+                userInfoFinal.put("UserInfo", userArray);
+                file.write(userInfoFinal.toJSONString());
                 file.close();
-            } catch (IOException e){
+            } catch (IOException e) {
                 e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         } catch (ParseException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

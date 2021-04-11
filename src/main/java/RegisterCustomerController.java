@@ -36,6 +36,7 @@ public class RegisterCustomerController extends Register{
     private Button customerBackButton;
 
     private String customerHome = "src/main/resources/MainPageCustomer.fxml";
+    private final String secretKey = "ssshhhhhhhhhhh!!!!";
 
     @FXML
     void clickCustomerBack(ActionEvent event) throws IOException {
@@ -67,7 +68,7 @@ public class RegisterCustomerController extends Register{
         userInfo.put("name", customerNameField.getText());
         userInfo.put("surname", customerSurnameField.getText());
         userInfo.put("email", customerEmailField.getText());
-        userInfo.put("password", customerPasswordField.getText());
+        userInfo.put("password", encrypt(customerPasswordField.getText(),secretKey));
         userInfo.put("electricity", 0);
         userInfo.put("gas",0);
         userInfo.put("internet",0);

@@ -40,9 +40,10 @@ public class RegisterAdminController extends Register{
     private Button backButton;
 
     private String adminHome = "src/main/resources/MainPageAdmin.fxml";
+    private final String secretKey = "ssshhhhhhhhhhh!!!!";
 
     @FXML
-    void backButtonAction(ActionEvent event, String filename) throws IOException {
+    void clickBackAdmin(ActionEvent event) throws IOException {
         Stage newStage = new Stage();
         Node source = (Node)  event.getSource();
         Stage stage  = (Stage) source.getScene().getWindow();
@@ -50,7 +51,7 @@ public class RegisterAdminController extends Register{
         //Create the FXMLLoader
         FXMLLoader loader = new FXMLLoader();
         //Path to the FXML File
-        String fxmlDocPath = filename;
+        String fxmlDocPath = "src/main/resources/HomePage.fxml";
         FileInputStream fxmlStream = new FileInputStream(fxmlDocPath);
 
         //Create the Pane and all Details
@@ -81,7 +82,7 @@ public class RegisterAdminController extends Register{
         userInfo.put("name", nameField.getText());
         userInfo.put("surname", surnameField.getText());
         userInfo.put("email",emailField.getText());
-        userInfo.put("password", passwordField.getText());
+        userInfo.put("password", encrypt(passwordField.getText(), secretKey));
         userInfo.put("key", keyField.getText());
         userInfo.put("role","admin");
 

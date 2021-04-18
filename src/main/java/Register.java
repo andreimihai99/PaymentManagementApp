@@ -61,13 +61,15 @@ public class Register {
         return checked;
     }
 
-    public int checkCorrectForm(String nameField, String surnameField, String emailField, String passwordField){
+    public int checkCorrectForm(String nameField, String surnameField, String usernameField, String emailField, String passwordField){
         int value = 0;
         if(nameField.length() < 1)
             value = 1;
         if(surnameField.length() < 1)
             value = 1;
-        if(emailField.length() < 6 || checkCorrectEmail(emailField) == 0)
+        if(usernameField.length() < 4)
+            value = 1;
+        if(emailField.length() < 6 || checkCorrectEmail(emailField) == 1)
             value = 1;
         if(passwordField.length() < 6)
             value = 1;

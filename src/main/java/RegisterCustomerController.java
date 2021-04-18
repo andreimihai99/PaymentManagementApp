@@ -3,6 +3,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -34,6 +35,9 @@ public class RegisterCustomerController extends Register{
 
     @FXML
     private Button customerBackButton;
+
+    @FXML
+    private TextField customerUsernameField;
 
     private String loginPage = "src/main/resources/LoginPage.fxml";
     private final String secretKey = "ssshhhhhhhhhhh!!!!";
@@ -67,6 +71,7 @@ public class RegisterCustomerController extends Register{
         JSONObject userInfoFinal = new JSONObject();
         userInfo.put("name", customerNameField.getText());
         userInfo.put("surname", customerSurnameField.getText());
+        userInfo.put("username", customerUsernameField.getText());
         userInfo.put("email", customerEmailField.getText());
         userInfo.put("password", encrypt(customerPasswordField.getText(),secretKey));
         userInfo.put("electricity", 0);
@@ -101,13 +106,22 @@ public class RegisterCustomerController extends Register{
 
     @FXML
     void clickCustomerRegister(ActionEvent event) throws IOException, ParseException {
+        Alert alert = new Alert(Alert.AlertType.NONE);
         String filename = "src/main/resources/userData.json";
-        if(checkCorrectForm(customerNameField.getText(), customerSurnameField.getText(), customerEmailField.getText(), customerPasswordField.getText()) == 0) {
+        if(checkCorrectForm(customerNameField.getText(), customerSurnameField.getText(), customerEmailField.getText(), customerPasswordField.getText(), customerUsernameField.getText()) == 0) {
             if (checkUniqueUser(customerNameField.getText(), customerSurnameField.getText(), customerEmailField.getText(), filename) == 0) {
                 addingToJSON();
                 goToHomePage(event, loginPage);
-            } else infoBox("Customer already exists!", "Warning");
+            } else {
+                alert.setAlertType(Alert.AlertType.WARNING);
+                alert.setContentText("User already exists!");
+                alert.show();
+            }
         }
-        else infoBox("Incorrect credentials!", "Warning");
+        else {
+            alert.setAlertType(Alert.AlertType.WARNING);
+            alert.setContentText("Incorrect registration form!");
+            alert.show();
+        }
     }
 }

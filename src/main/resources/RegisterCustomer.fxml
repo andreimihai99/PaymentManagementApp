@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RegisterCustomerController">
    <children>
       <Label layoutX="85.0" layoutY="45.0" text="Register Customer">
@@ -15,11 +14,12 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="customerNameField" layoutX="76.0" layoutY="114.0" promptText="name" />
-      <TextField fx:id="customerSurnameField" layoutX="76.0" layoutY="159.0" promptText="surname" />
-      <TextField fx:id="customerEmailField" layoutX="76.0" layoutY="200.0" promptText="email" />
+      <TextField fx:id="customerNameField" layoutX="75.0" layoutY="99.0" promptText="name" />
+      <TextField fx:id="customerSurnameField" layoutX="75.0" layoutY="138.0" promptText="surname" />
+      <TextField fx:id="customerEmailField" layoutX="76.0" layoutY="212.0" promptText="email" />
       <PasswordField fx:id="customerPasswordField" layoutX="76.0" layoutY="248.0" promptText="password" />
       <Button fx:id="customerRegisterButton" layoutX="120.0" layoutY="296.0" mnemonicParsing="false" onAction="#clickCustomerRegister" text="Register" />
       <Button fx:id="customerBackButton" layoutX="129.0" layoutY="337.0" mnemonicParsing="false" onAction="#clickCustomerBack" text="Back" />
+      <TextField fx:id="customerUsernameField" layoutX="75.0" layoutY="175.0" promptText="username" />
    </children>
 </AnchorPane>

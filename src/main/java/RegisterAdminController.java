@@ -3,6 +3,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -17,6 +18,9 @@ import javax.swing.*;
 import java.io.*;
 
 public class RegisterAdminController extends Register{
+
+    @FXML
+    private TextField adminUsernameField;
 
     @FXML
     private PasswordField passwordField;
@@ -66,14 +70,19 @@ public class RegisterAdminController extends Register{
 
     @FXML
     public void clickRegisterAdmin(ActionEvent event) throws IOException, ParseException {
+        Alert alert = new Alert(Alert.AlertType.NONE);
         String filename = "src/main/resources/userData.json";
-        if(checkCorrectForm(nameField.getText(), surnameField.getText(), emailField.getText(), passwordField.getText()) == 0) {
+        if(checkCorrectForm(nameField.getText(), surnameField.getText(), emailField.getText(), passwordField.getText(), adminUsernameField.getText()) == 0) {
             if (checkUniqueUser(nameField.getText(), surnameField.getText(), emailField.getText(), filename) == 0) {
                 addingToJSON();
                 goToHomePage(event, loginPage);
-            } else infoBox("Customer already exists!", "Warning");
+            } else infoBox("User already exists!", "Warning");
         }
-        else infoBox("Incorrect credentials!", "Warning");
+        else {
+            alert.setAlertType(Alert.AlertType.WARNING);
+            alert.setContentText("Incorrect credentials");
+            alert.show();
+        }
     }
 
     public void addingToJSON(){
@@ -81,6 +90,7 @@ public class RegisterAdminController extends Register{
         JSONObject userInfoFinal = new JSONObject();
         userInfo.put("name", nameField.getText());
         userInfo.put("surname", surnameField.getText());
+        userInfo.put("username", adminUsernameField.getText());
         userInfo.put("email",emailField.getText());
         userInfo.put("password", encrypt(passwordField.getText(), secretKey));
         userInfo.put("key", keyField.getText());

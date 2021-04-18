@@ -3,6 +3,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -60,32 +61,47 @@ public class LoginPageController extends Register {
 
     @FXML
     void loginButtonAction(ActionEvent event) throws IOException, ParseException {
+        Alert alert = new Alert(Alert.AlertType.NONE);
+        checkUserAndPassword();
         if(checkUserAndPassword() == 1 && checkCorrectForm() == 1)
             goToHomePage(event, mainPageCustomer);
         else if(checkUserAndPassword() == 2 && checkCorrectForm() == 1)
             goToHomePage(event, mainPageAdmin);
-        else
-            infoBox("Incorrect credentials!", "Warning");
+        else {
+            alert.setAlertType(Alert.AlertType.WARNING);
+            alert.setContentText("Incorrect credentials");
+            alert.show();
+        }
+
     }
 
     public int checkUserAndPassword() throws IOException, ParseException {
         JSONParser jsonParser = new JSONParser();
-        JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader("src/main/resources/userData.json"));
-        JSONArray jsonArray = (JSONArray) jsonObject.get("UserInfo");
-        Iterator iterator = jsonArray.iterator();
         int correct = 0;
-        while(iterator.hasNext())
-            if(usernameLoginField.getText().equals(jsonObject.get("name")) && decrypt(passwordLoginField.getText(), secretKey).equals(jsonObject.get("password")) && jsonObject.get("role").equals("customer"))
-                correct = 1;
-            else if(usernameLoginField.getText().equals(jsonObject.get("name")) && decrypt(passwordLoginField.getText(), secretKey).equals(jsonObject.get("password")) && jsonObject.get("role").equals("admin"))
-                correct = 2;
-            return correct;
+        try {
+            JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader("src/main/resources/userData.json"));
+            JSONArray jsonArray = (JSONArray) jsonObject.get("UserInfo");
+            Iterator iterator = jsonArray.iterator();
+
+            while(iterator.hasNext()){
+                JSONObject user = (JSONObject) iterator.next();
+                if (usernameLoginField.getText().equals(user.get("username")) && encrypt(passwordLoginField.getText(), secretKey).equals(user.get("password")) && user.get("role").equals("customer"))
+                    correct = 1;
+                else if (usernameLoginField.getText().equals(user.get("username")) && encrypt(passwordLoginField.getText(), secretKey).equals(user.get("password")) && user.get("role").equals("admin"))
+                    correct = 2;
+            }
+        } catch(NullPointerException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return correct;
     }
 
     public int checkCorrectForm(){
-        int correct = 0;
+        int correct = 1;
         if(usernameLoginField.getText().isEmpty() || passwordLoginField.getText().isEmpty())
-            correct = 1;
+            correct = 0;
         return correct;
     }
 

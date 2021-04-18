@@ -9,7 +9,7 @@ import java.io.FileInputStream;
 public class Client extends Application {
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader();
-        String fxmlPath = "src/main/resources/HomePage.fxml";
+        String fxmlPath = "src/main/resources/StartPage.fxml";
 
         FileInputStream fxmlStream = new FileInputStream(fxmlPath);
         Pane root = (Pane)loader.load(fxmlStream);

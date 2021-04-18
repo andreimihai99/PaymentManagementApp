@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainPageController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainPageCustomerController">
    <children>
       <Label layoutX="35.0" layoutY="33.0" prefHeight="55.0" prefWidth="217.0" text="Check your receipts">
          <font>
@@ -12,5 +13,6 @@
          </font>
       </Label>
       <Pane layoutX="296.0" layoutY="24.0" prefHeight="338.0" prefWidth="284.0" />
+      <TextArea fx:id="customerTextDisplay" layoutX="57.0" layoutY="134.0" />
    </children>
 </Pane>

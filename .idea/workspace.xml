@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="fc4ef2fe-9205-47b4-add4-60aabb22a257" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/target/classes/MainPageCustomerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainPageCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainPageCustomerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RegisterAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegisterAdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RegisterCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegisterCustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/RegisterAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/RegisterAdmin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StartPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StartPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/LoginPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MainPageCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainPageCustomer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/StartPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/StartPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/userData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HomePage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StartPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/HomePageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StartPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LoginPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LoginPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LoginPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LoginPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/PaymentManagementApp.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainPageCustomer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainPageCustomer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegisterAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegisterAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegisterCustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegisterCustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/userData.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userData.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,21 +44,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1ptLTRhRSPCjeRj7j534fFSnc3B" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
@@ -74,6 +85,7 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -92,54 +104,11 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1616513655095">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="488" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1616513655095" />
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1617311350005">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1617311350005" />
-    <state x="462" y="105" key="FileChooserDialogImpl" timestamp="1617220251663">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="462" y="105" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1617220251663" />
-    <state width="1323" height="98" key="GridCell.Tab.0.bottom" timestamp="1618166369772">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="98" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618166369772" />
-    <state width="1323" height="98" key="GridCell.Tab.0.center" timestamp="1618166369772">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="98" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1618166369772" />
-    <state width="1323" height="98" key="GridCell.Tab.0.left" timestamp="1618166369772">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="98" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1618166369772" />
-    <state width="1323" height="98" key="GridCell.Tab.0.right" timestamp="1618166369772">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="98" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1618166369772" />
-    <state x="499" y="142" key="chooseDestDirectoryDialog" timestamp="1617309945640">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="499" y="142" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1617309945640" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1617703133019">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1617703133019" />
-    <state x="65" y="59" key="new project wizard" timestamp="1617703156053">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="65" y="59" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1617703156053" />
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

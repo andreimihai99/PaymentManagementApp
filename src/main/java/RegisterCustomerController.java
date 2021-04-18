@@ -35,7 +35,7 @@ public class RegisterCustomerController extends Register{
     @FXML
     private Button customerBackButton;
 
-    private String customerHome = "src/main/resources/MainPageCustomer.fxml";
+    private String loginPage = "src/main/resources/LoginPage.fxml";
     private final String secretKey = "ssshhhhhhhhhhh!!!!";
 
     @FXML
@@ -47,7 +47,7 @@ public class RegisterCustomerController extends Register{
         //Create the FXMLLoader
         FXMLLoader loader = new FXMLLoader();
         //Path to the FXML File
-        String fxmlDocPath = "src/main/resources/HomePage.fxml";
+        String fxmlDocPath = "src/main/resources/StartPage.fxml";
         FileInputStream fxmlStream = new FileInputStream(fxmlDocPath);
 
         //Create the Pane and all Details
@@ -105,7 +105,7 @@ public class RegisterCustomerController extends Register{
         if(checkCorrectForm(customerNameField.getText(), customerSurnameField.getText(), customerEmailField.getText(), customerPasswordField.getText()) == 0) {
             if (checkUniqueUser(customerNameField.getText(), customerSurnameField.getText(), customerEmailField.getText(), filename) == 0) {
                 addingToJSON();
-                goToHomePage(event, customerHome);
+                goToHomePage(event, loginPage);
             } else infoBox("Customer already exists!", "Warning");
         }
         else infoBox("Incorrect credentials!", "Warning");

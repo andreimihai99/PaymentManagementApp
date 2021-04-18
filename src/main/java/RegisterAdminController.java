@@ -39,7 +39,7 @@ public class RegisterAdminController extends Register{
     @FXML
     private Button backButton;
 
-    private String adminHome = "src/main/resources/MainPageAdmin.fxml";
+    private String loginPage = "src/main/resources/LoginPage.fxml";
     private final String secretKey = "ssshhhhhhhhhhh!!!!";
 
     @FXML
@@ -51,7 +51,7 @@ public class RegisterAdminController extends Register{
         //Create the FXMLLoader
         FXMLLoader loader = new FXMLLoader();
         //Path to the FXML File
-        String fxmlDocPath = "src/main/resources/HomePage.fxml";
+        String fxmlDocPath = "src/main/resources/StartPage.fxml";
         FileInputStream fxmlStream = new FileInputStream(fxmlDocPath);
 
         //Create the Pane and all Details
@@ -70,7 +70,7 @@ public class RegisterAdminController extends Register{
         if(checkCorrectForm(nameField.getText(), surnameField.getText(), emailField.getText(), passwordField.getText()) == 0) {
             if (checkUniqueUser(nameField.getText(), surnameField.getText(), emailField.getText(), filename) == 0) {
                 addingToJSON();
-                goToHomePage(event, adminHome);
+                goToHomePage(event, loginPage);
             } else infoBox("Customer already exists!", "Warning");
         }
         else infoBox("Incorrect credentials!", "Warning");

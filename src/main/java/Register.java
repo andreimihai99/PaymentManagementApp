@@ -32,7 +32,7 @@ public class Register extends Client{
 
     }
 
-    void goToHomePage(ActionEvent event, String filename) throws IOException {
+    void goToPage(ActionEvent event, String filename) throws IOException {
         Stage newStage = new Stage();
         Node source = (Node)  event.getSource();
         Stage stage  = (Stage) source.getScene().getWindow();

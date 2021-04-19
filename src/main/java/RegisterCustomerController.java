@@ -111,7 +111,7 @@ public class RegisterCustomerController extends Register{
         if(checkCorrectForm(customerNameField.getText(), customerSurnameField.getText(), customerEmailField.getText(), customerPasswordField.getText(), customerUsernameField.getText()) == 0) {
             if (checkUniqueUser(customerNameField.getText(), customerSurnameField.getText(), customerEmailField.getText(), filename) == 0) {
                 addingToJSON();
-                goToHomePage(event, loginPage);
+                goToPage(event, loginPage);
             } else {
                 alert.setAlertType(Alert.AlertType.WARNING);
                 alert.setContentText("User already exists!");

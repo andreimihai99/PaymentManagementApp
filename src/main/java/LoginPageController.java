@@ -66,10 +66,10 @@ public class LoginPageController extends Register {
         checkUserAndPassword();
         if(checkUserAndPassword() == 1 && checkCorrectForm() == 1) {
             customer = usernameLoginField.getText();
-            goToHomePage(event, mainPageCustomer);
+            goToPage(event, mainPageCustomer);
         }
         else if(checkUserAndPassword() == 2 && checkCorrectForm() == 1)
-            goToHomePage(event, mainPageAdmin);
+            goToPage(event, mainPageAdmin);
         else {
             alert.setAlertType(Alert.AlertType.WARNING);
             alert.setContentText("Incorrect credentials");

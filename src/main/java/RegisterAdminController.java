@@ -75,7 +75,7 @@ public class RegisterAdminController extends Register{
         if(checkCorrectForm(nameField.getText(), surnameField.getText(), emailField.getText(), passwordField.getText(), adminUsernameField.getText()) == 0) {
             if (checkUniqueUser(nameField.getText(), surnameField.getText(), emailField.getText(), filename) == 0) {
                 addingToJSON();
-                goToHomePage(event, loginPage);
+                goToPage(event, loginPage);
             } else infoBox("User already exists!", "Warning");
         }
         else {

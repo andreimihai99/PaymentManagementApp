@@ -37,6 +37,7 @@ public class LoginPageController extends Register {
     private String mainPageCustomer = "src/main/resources/MainPageCustomer.fxml";
     private String mainPageAdmin = "src/main/resources/MainPageAdmin.fxml";
 
+
     @FXML
     void backLoginButtonAction(ActionEvent event) throws IOException {
         Stage newStage = new Stage();
@@ -63,8 +64,10 @@ public class LoginPageController extends Register {
     void loginButtonAction(ActionEvent event) throws IOException, ParseException {
         Alert alert = new Alert(Alert.AlertType.NONE);
         checkUserAndPassword();
-        if(checkUserAndPassword() == 1 && checkCorrectForm() == 1)
+        if(checkUserAndPassword() == 1 && checkCorrectForm() == 1) {
+            customer = usernameLoginField.getText();
             goToHomePage(event, mainPageCustomer);
+        }
         else if(checkUserAndPassword() == 2 && checkCorrectForm() == 1)
             goToHomePage(event, mainPageAdmin);
         else {
@@ -85,8 +88,9 @@ public class LoginPageController extends Register {
 
             while(iterator.hasNext()){
                 JSONObject user = (JSONObject) iterator.next();
-                if (usernameLoginField.getText().equals(user.get("username")) && encrypt(passwordLoginField.getText(), secretKey).equals(user.get("password")) && user.get("role").equals("customer"))
+                if (usernameLoginField.getText().equals(user.get("username")) && encrypt(passwordLoginField.getText(), secretKey).equals(user.get("password")) && user.get("role").equals("customer")) {
                     correct = 1;
+                }
                 else if (usernameLoginField.getText().equals(user.get("username")) && encrypt(passwordLoginField.getText(), secretKey).equals(user.get("password")) && user.get("role").equals("admin"))
                     correct = 2;
             }
@@ -104,5 +108,6 @@ public class LoginPageController extends Register {
             correct = 0;
         return correct;
     }
+
 
 }

@@ -18,7 +18,7 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Base64;
 
-public class Register {
+public class Register extends Client{
 
     private static SecretKeySpec secretKey;
     private static byte[] key;

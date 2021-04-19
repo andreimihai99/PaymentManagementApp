@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="AddAmountsController"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="382.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddAmountsPage">
+   <children>
+      <Label layoutX="35.0" layoutY="47.0" text="Search for customer: ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchCustomerField" layoutX="175.0" layoutY="45.0" promptText="customer" />
+      <Label layoutX="35.0" layoutY="132.0" prefHeight="17.0" prefWidth="114.0" text="Add new amounts">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="showAccountValuesButton" layoutX="74.0" layoutY="86.0" mnemonicParsing="false" onAction="#showAccountValues" text="Show account values for customer" />
+      <TextField fx:id="addElectricityField" layoutX="105.0" layoutY="165.0" promptText="electricity" />
+      <TextField fx:id="addInternetField" layoutX="105.0" layoutY="200.0" promptText="internet" />
+      <TextField fx:id="addTapWaterField" layoutX="105.0" layoutY="240.0" promptText="tap water" />
+      <TextField fx:id="addGasField" layoutX="105.0" layoutY="280.0" promptText="gas" />
+      <Label layoutX="35.0" layoutY="169.0" text="Electricity" />
+      <Label layoutX="35.0" layoutY="204.0" text="Internet" />
+      <Label layoutX="35.0" layoutY="244.0" text="Tap water" />
+      <Label layoutX="35.0" layoutY="284.0" text="Gas" />
+      <TextArea fx:id="showAccountValuesField" layoutX="350.0" layoutY="42.0" opacity="0.0" prefHeight="263.0" prefWidth="200.0" />
+      <Button fx:id="addAmountsButton" layoutX="74.0" layoutY="327.0" mnemonicParsing="false" onAction="#addAmountsToAccount" prefHeight="25.0" prefWidth="198.0" text="Add amounts" />
+   </children>
 </AnchorPane>

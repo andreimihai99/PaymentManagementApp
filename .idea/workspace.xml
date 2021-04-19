@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fc4ef2fe-9205-47b4-add4-60aabb22a257" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/AddAmountsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DisplayCustomersController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/AddAmountsPage.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/DisplayCustomersPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LoginPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainPageAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainPageAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegisterAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegisterAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegisterCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegisterCustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MainPageAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainPageAdmin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainPageAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainPageAdmin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainPageAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainPageAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainPageCustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainPageCustomerController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,10 +100,26 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1618863835841">
+    <state width="1323" height="164" key="GridCell.Tab.0.bottom" timestamp="1618869555998">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1618863835841" />
+    <state width="1323" height="164" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618869555998" />
+    <state width="1323" height="164" key="GridCell.Tab.0.center" timestamp="1618869555998">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="164" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1618869555998" />
+    <state width="1323" height="164" key="GridCell.Tab.0.left" timestamp="1618869555998">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="164" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1618869555998" />
+    <state width="1323" height="164" key="GridCell.Tab.0.right" timestamp="1618869555998">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="164" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1618869555998" />
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1618869596757">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1618869596757" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -65,7 +65,7 @@ public class MainPageCustomerController extends LoginPageController {
         int sum = checkReceipt("electricity", customerElectricityLabel) + checkReceipt("gas", customerGasLabel) +
                 checkReceipt("tap water", customerTapWaterLabel) + checkReceipt("internet", customerInternetLabel);
         if(sum != 0)
-            customerReceiptLabel.setText("You have " + sum + " receipt to pay");
+            customerReceiptLabel.setText("You have " + sum + " receipts to pay");
         else
             customerReceiptLabel.setText("You have nothing to pay");
     }

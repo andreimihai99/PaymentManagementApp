@@ -6,6 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="fc4ef2fe-9205-47b4-add4-60aabb22a257" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AddAmountsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AddAmountsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DisplayCustomersController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainPageAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainPageAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainPageCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainPageCustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/AddAmountsPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AddAmountsPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/DisplayCustomersPage.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MainPageAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainPageAdmin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/userData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LoginPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LoginPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainPageAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainPageAdmin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainPageAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainPageAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainPageCustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainPageCustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Register.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegisterAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegisterAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegisterCustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegisterCustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/userData.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userData.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +58,7 @@
       <recent name="C:\Users\User\Desktop\Ecran\MyProjects\Java\PaymentManagementApp\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RegisterAdminController">
+  <component name="RunManager" selected="Application.MainPageAdminController">
     <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Client" />
       <module name="PaymentManagementApp" />
@@ -57,6 +73,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainPageAdminController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainPageAdminController" />
+      <module name="PaymentManagementApp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RegisterAdminController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="RegisterAdminController" />
       <module name="PaymentManagementApp" />
@@ -66,13 +89,14 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainPageAdminController" />
         <item itemvalue="Application.RegisterAdminController" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -91,35 +115,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1323" height="164" key="GridCell.Tab.0.bottom" timestamp="1618869555998">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="164" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1618869555998" />
-    <state width="1323" height="164" key="GridCell.Tab.0.center" timestamp="1618869555998">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="164" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1618869555998" />
-    <state width="1323" height="164" key="GridCell.Tab.0.left" timestamp="1618869555998">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="164" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1618869555998" />
-    <state width="1323" height="164" key="GridCell.Tab.0.right" timestamp="1618869555998">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="164" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1618869555998" />
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog" timestamp="1618869596757">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="379" y="188" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1618869596757" />
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

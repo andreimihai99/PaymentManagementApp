@@ -4,6 +4,7 @@ import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
@@ -17,6 +18,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Base64;
+import java.util.Iterator;
 
 public class Register extends Client{
 
@@ -82,13 +84,25 @@ public class Register extends Client{
         return jsonParser.parse(reader);
     }
 
-    public int checkUniqueUser(String nameField, String surnameField, String emailField, String filename) throws IOException, ParseException {
-        JSONObject jsonObject = (JSONObject) readJSON(filename);
-        int correct = 0;
-        for(int i = 0; i < jsonObject.size(); i++)
-            if(jsonObject.get("name") == nameField && jsonObject.get("surname") == surnameField && jsonObject.get("email") == emailField)
-                correct = 1;
-        return correct;
+    public int checkUniqueUser(String usernameField) throws IOException, ParseException {
+        JSONParser jsonParser = new JSONParser();
+        int exists = 0;
+        try {
+            JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader("src/main/resources/userData.json"));
+            JSONArray jsonArray = (JSONArray) jsonObject.get("UserInfo");
+            Iterator iterator = jsonArray.iterator();
+
+            while(iterator.hasNext()){
+                JSONObject user = (JSONObject) iterator.next();
+                if(user.get("name").toString().equals(usernameField))
+                    exists = 1;
+            }
+        } catch(NullPointerException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return exists;
     }
 
     public static void setKey(String myKey)

@@ -70,9 +70,13 @@ public class AddAmountsController extends Register {
                     if (!addGasField.getText().isEmpty()) {
                         searchedUser.replace("gas", addGasField.getText());
                         break;
+                    } else {
+                        alert.setAlertType(Alert.AlertType.WARNING);
+                        alert.setContentText("You must fill at least one field");
+                        alert.show();
                     }
                 } else {
-                    alert.setAlertType(Alert.AlertType.ERROR);
+                    alert.setAlertType(Alert.AlertType.WARNING);
                     alert.setContentText("User does not exist!");
                     alert.show();
                 }
@@ -115,7 +119,6 @@ public class AddAmountsController extends Register {
         Scene scene = new Scene(root, 300, 200);
         JSONParser jsonParser = new JSONParser();
         String searchedUser = "";
-        int count = 0;
         Alert alert = new Alert(Alert.AlertType.NONE);
         try {
             JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader("src/main/resources/userData.json"));

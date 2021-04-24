@@ -73,10 +73,14 @@ public class RegisterAdminController extends Register{
         Alert alert = new Alert(Alert.AlertType.NONE);
         String filename = "src/main/resources/userData.json";
         if(checkCorrectForm(nameField.getText(), surnameField.getText(), emailField.getText(), passwordField.getText(), adminUsernameField.getText()) == 0) {
-            if (checkUniqueUser(nameField.getText(), surnameField.getText(), emailField.getText(), filename) == 0) {
+            if (checkUniqueUser(adminUsernameField.getText()) == 0) {
                 addingToJSON();
                 goToPage(event, loginPage);
-            } else infoBox("User already exists!", "Warning");
+            } else {
+                alert.setAlertType(Alert.AlertType.WARNING);
+                alert.setContentText("Username is already taken!");
+                alert.show();
+            }
         }
         else {
             alert.setAlertType(Alert.AlertType.WARNING);

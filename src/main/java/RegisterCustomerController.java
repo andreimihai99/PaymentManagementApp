@@ -109,12 +109,12 @@ public class RegisterCustomerController extends Register{
         Alert alert = new Alert(Alert.AlertType.NONE);
         String filename = "src/main/resources/userData.json";
         if(checkCorrectForm(customerNameField.getText(), customerSurnameField.getText(), customerEmailField.getText(), customerPasswordField.getText(), customerUsernameField.getText()) == 0) {
-            if (checkUniqueUser(customerNameField.getText(), customerSurnameField.getText(), customerEmailField.getText(), filename) == 0) {
+            if (checkUniqueUser(customerUsernameField.getText()) == 0) {
                 addingToJSON();
                 goToPage(event, loginPage);
             } else {
                 alert.setAlertType(Alert.AlertType.WARNING);
-                alert.setContentText("User already exists!");
+                alert.setContentText("Username is already taken!");
                 alert.show();
             }
         }

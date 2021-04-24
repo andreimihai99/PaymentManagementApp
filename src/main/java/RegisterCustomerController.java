@@ -74,10 +74,10 @@ public class RegisterCustomerController extends Register{
         userInfo.put("username", customerUsernameField.getText());
         userInfo.put("email", customerEmailField.getText());
         userInfo.put("password", encrypt(customerPasswordField.getText(),secretKey));
-        userInfo.put("electricity", 0);
-        userInfo.put("gas",0);
-        userInfo.put("internet",0);
-        userInfo.put("tap water",0);
+        userInfo.put("electricity", "0");
+        userInfo.put("gas", "0");
+        userInfo.put("internet", "0");
+        userInfo.put("tap water", "0");
         userInfo.put("role","customer");
 
         JSONParser jsonParser = new JSONParser();

@@ -7,19 +7,9 @@
     <list default="true" id="fc4ef2fe-9205-47b4-add4-60aabb22a257" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AddAmountsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AddAmountsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DisplayCustomersController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainPageAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainPageAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainPageCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainPageCustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/AddAmountsPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AddAmountsPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DisplayCustomersPage.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/MainPageAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/MainPageAdmin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegisterCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegisterCustomerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/userData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/userData.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/LoginPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LoginPageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainPageAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainPageAdmin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainPageAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainPageAdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainPageCustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainPageCustomerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Register.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Register.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegisterAdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegisterAdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AddAmountsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AddAmountsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/RegisterCustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegisterCustomerController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/userData.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/userData.json" afterDir="false" />
     </list>
@@ -38,6 +28,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1ptLTRhRSPCjeRj7j534fFSnc3B" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -96,7 +93,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -115,12 +112,31 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1323" height="98" key="GridCell.Tab.0.bottom" timestamp="1619289442623">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="98" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1619289442623" />
+    <state width="1323" height="98" key="GridCell.Tab.0.center" timestamp="1619289442623">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="98" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1619289442623" />
+    <state width="1323" height="98" key="GridCell.Tab.0.left" timestamp="1619289442623">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="98" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1619289442623" />
+    <state width="1323" height="98" key="GridCell.Tab.0.right" timestamp="1619289442623">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="98" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1619289442623" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

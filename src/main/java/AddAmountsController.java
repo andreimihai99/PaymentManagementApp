@@ -1,10 +1,7 @@
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.json.simple.JSONArray;
@@ -53,23 +50,46 @@ public class AddAmountsController extends Register {
     @FXML
     void addAmountsToAccount(ActionEvent event) {
         JSONParser jsonParser = new JSONParser();
+        Alert alert = new Alert(Alert.AlertType.NONE);
         try {
             JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader("src/main/resources/userData.json"));
             JSONArray jsonArray = (JSONArray) jsonObject.get("UserInfo");
             Iterator iterator = jsonArray.iterator();
             while(iterator.hasNext()){
-                JSONObject user = (JSONObject) iterator.next();
-//                if(user.get("username").toString().equals(searchCustomerField.getText())) {
-//                    try {
-//                        FileWriter writer = new FileWriter("src/main/resources/userData.json");
-//                        user.put("electricity", addElectricityField.getText());
-//                        writer.write(user.toString());
-//                        writer.close();
-//                    } catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
+                JSONObject searchedUser = (JSONObject) iterator.next();
+                if(searchedUser.get("name").equals(searchCustomerField.getText())) {
+                    if (!addElectricityField.getText().isEmpty()) {
+                        searchedUser.replace("electricity", addElectricityField.getText());
+                    }
+                    if (!addInternetField.getText().isEmpty()) {
+                        searchedUser.replace("internet", addInternetField.getText());
+                    }
+                    if (!addTapWaterField.getText().isEmpty()) {
+                        searchedUser.replace("tap water", addTapWaterField.getText());
+                    }
+                    if (!addGasField.getText().isEmpty()) {
+                        searchedUser.replace("gas", addGasField.getText());
+                        break;
+                    }
+                } else {
+                    alert.setAlertType(Alert.AlertType.ERROR);
+                    alert.setContentText("User does not exist!");
+                    alert.show();
                 }
-            } catch (FileNotFoundException fileNotFoundException) {
+            }
+
+            JSONObject aux = new JSONObject();
+            aux.put("UserInfo", jsonArray);
+            try {
+                FileWriter file = new FileWriter("src/main/resources/userData.json");
+                file.write(aux.toJSONString());
+                file.close();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+        } catch (FileNotFoundException fileNotFoundException) {
             fileNotFoundException.printStackTrace();
         } catch (IOException ioException) {
             ioException.printStackTrace();
@@ -96,6 +116,7 @@ public class AddAmountsController extends Register {
         JSONParser jsonParser = new JSONParser();
         String searchedUser = "";
         int count = 0;
+        Alert alert = new Alert(Alert.AlertType.NONE);
         try {
             JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader("src/main/resources/userData.json"));
             JSONArray jsonArray = (JSONArray) jsonObject.get("UserInfo");
@@ -106,6 +127,20 @@ public class AddAmountsController extends Register {
                     searchedUser = " Name: " + user.get("name").toString() + "\n" + " Surname: " + user.get("surname").toString() + "\n"
                             + " Electricity: " + user.get("electricity").toString() + "\n" + " Gas: " + user.get("gas").toString() + "\n"
                             + " Tap water: " + user.get("tap water").toString() + "\n" + " Internet: " + user.get("internet").toString() + "\n\n";
+                    //String text = searchedUser;
+
+                    Text txt = new Text(searchedUser);
+                    txt.wrappingWidthProperty().bind(scene.widthProperty());
+                    root.setFitToHeight(true);
+                    root.setContent(txt);
+                    primaryStage.setTitle("Customers");
+                    primaryStage.setScene(scene);
+                    primaryStage.show();
+
+                } else {
+                    alert.setAlertType(Alert.AlertType.ERROR);
+                    alert.setContentText("User does not exist!");
+                    alert.show();
                 }
             }
         } catch(NullPointerException e) {
@@ -113,14 +148,5 @@ public class AddAmountsController extends Register {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        String text = searchedUser;
-
-        Text txt = new Text(text);
-        txt.wrappingWidthProperty().bind(scene.widthProperty());
-        root.setFitToHeight(true);
-        root.setContent(txt);
-        primaryStage.setTitle("Customers");
-        primaryStage.setScene(scene);
-        primaryStage.show();
     }
 }

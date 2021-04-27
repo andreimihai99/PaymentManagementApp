@@ -32,13 +32,20 @@ public class MainPageCustomerController extends LoginPageController {
     private Button showAmountsButton;
 
     @FXML
-    private Button payButton;
+    private Button payElectricityButton;
+
+    @FXML
+    private Button payTapWaterButton;
+
+    @FXML
+    private Button payGasButton;
+
+    @FXML
+    private Button payInternetButton;
 
     @FXML
     private Button payAllButton;
 
-    @FXML
-    private TextField getAmountField;
 
 
     public int checkReceipt(String billField, Label dest){
@@ -125,10 +132,63 @@ public class MainPageCustomerController extends LoginPageController {
         }
     }
 
-    @FXML
-    void payButtonAction(ActionEvent event) {                   //the customer introduces the amount he wants to pay
-        String payAmount = getAmountField.getText();
+    void pressPayButton(String expenditure){
+        Alert alert = new Alert(Alert.AlertType.NONE);
+        JSONParser jsonParser = new JSONParser();
+        try {
+            JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader("src/main/resources/userData.json"));
+            JSONArray jsonArray = (JSONArray) jsonObject.get("UserInfo");
+            Iterator iterator = jsonArray.iterator();
 
+            while(iterator.hasNext()){
+                JSONObject currentUser = (JSONObject) iterator.next();
+                if(currentUser.get("username").equals(customer)) {
+                    currentUser.replace(expenditure, "0");
+                    alert.setAlertType(Alert.AlertType.CONFIRMATION);
+                    alert.setContentText("Are you sure about this action?");
+                    alert.show();
+                }
+            }
+            JSONObject aux = new JSONObject();
+            aux.put("UserInfo", jsonArray);
+            try {
+                FileWriter file = new FileWriter("src/main/resources/userData.json");
+                file.write(aux.toJSONString());
+                file.close();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        } catch(NullPointerException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void payElectricityButtonAction(ActionEvent event) {
+        pressPayButton("electricity");
+    }
+
+    @FXML
+    void payGasButtonAction(ActionEvent event) {
+        pressPayButton("gas");
+    }
+
+    @FXML
+    void payInternetButtonAction(ActionEvent event) {
+        pressPayButton("internet");
+    }
+
+    @FXML
+    void payTapWaterButtonAction(ActionEvent event) {
+        pressPayButton("tap water");
     }
 
 }
+

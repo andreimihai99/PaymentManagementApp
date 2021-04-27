@@ -51,55 +51,67 @@ public class AddAmountsController extends Register {
     void addAmountsToAccount(ActionEvent event) {
         JSONParser jsonParser = new JSONParser();
         Alert alert = new Alert(Alert.AlertType.NONE);
+        int repl = 0, searched = 0;
         try {
             JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader("src/main/resources/userData.json"));
             JSONArray jsonArray = (JSONArray) jsonObject.get("UserInfo");
             Iterator iterator = jsonArray.iterator();
-            while(iterator.hasNext()){
+            while (iterator.hasNext()) {
                 JSONObject searchedUser = (JSONObject) iterator.next();
-                if(searchedUser.get("name").equals(searchCustomerField.getText())) {
+                if (searchedUser.get("name").equals(searchCustomerField.getText())) {           //compare the input from the admin with the info in json file
                     if (!addElectricityField.getText().isEmpty()) {
-                        searchedUser.replace("electricity", addElectricityField.getText());
+                        searchedUser.replace("electricity", addElectricityField.getText());         //replace the respective fields
+                        repl++;                                                                     //if no field is filled, an alert will be displayed
                     }
                     if (!addInternetField.getText().isEmpty()) {
                         searchedUser.replace("internet", addInternetField.getText());
+                        repl++;
                     }
                     if (!addTapWaterField.getText().isEmpty()) {
                         searchedUser.replace("tap water", addTapWaterField.getText());
+                        repl++;
                     }
                     if (!addGasField.getText().isEmpty()) {
                         searchedUser.replace("gas", addGasField.getText());
+                        repl++;
                         break;
-                    } else {
-                        alert.setAlertType(Alert.AlertType.WARNING);
-                        alert.setContentText("You must fill at least one field");
-                        alert.show();
                     }
-                } else {
-                    alert.setAlertType(Alert.AlertType.WARNING);
-                    alert.setContentText("User does not exist!");
-                    alert.show();
+                    searched = 1;
                 }
+
             }
 
-            JSONObject aux = new JSONObject();
-            aux.put("UserInfo", jsonArray);
-            try {
-                FileWriter file = new FileWriter("src/main/resources/userData.json");
-                file.write(aux.toJSONString());
-                file.close();
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
+            if (searched == 0) {
+                alert.setAlertType(Alert.AlertType.WARNING);
+                alert.setContentText("User does not exist!");
+                alert.show();
             }
 
-        } catch (FileNotFoundException fileNotFoundException) {
-            fileNotFoundException.printStackTrace();
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
-        } catch (ParseException parseException) {
-            parseException.printStackTrace();
-        }
+            if (repl == 0) {
+                alert.setAlertType(Alert.AlertType.WARNING);
+                alert.setContentText("You must fill at least one field");
+                alert.show();
+            }
+
+
+                JSONObject aux = new JSONObject();
+                aux.put("UserInfo", jsonArray);                             //when information is replaced in the json, the entire modified data gets rewritten into the json file
+                try {
+                    FileWriter file = new FileWriter("src/main/resources/userData.json");
+                    file.write(aux.toJSONString());
+                    file.close();
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+
+            } catch(FileNotFoundException fileNotFoundException){
+                fileNotFoundException.printStackTrace();
+            } catch(IOException ioException){
+                ioException.printStackTrace();
+            } catch(ParseException parseException){
+                parseException.printStackTrace();
+            }
     }
 
     @FXML
@@ -119,6 +131,7 @@ public class AddAmountsController extends Register {
         Scene scene = new Scene(root, 300, 200);
         JSONParser jsonParser = new JSONParser();
         String searchedUser = "";
+        int searched = 0;
         Alert alert = new Alert(Alert.AlertType.NONE);
         try {
             JSONObject jsonObject = (JSONObject) jsonParser.parse(new FileReader("src/main/resources/userData.json"));
@@ -140,11 +153,13 @@ public class AddAmountsController extends Register {
                     primaryStage.setScene(scene);
                     primaryStage.show();
 
-                } else {
-                    alert.setAlertType(Alert.AlertType.ERROR);
-                    alert.setContentText("User does not exist!");
-                    alert.show();
+                    searched = 1;
                 }
+            }
+            if(searched == 0) {
+                alert.setAlertType(Alert.AlertType.ERROR);
+                alert.setContentText("User does not exist!");
+                alert.show();
             }
         } catch(NullPointerException e) {
             e.printStackTrace();

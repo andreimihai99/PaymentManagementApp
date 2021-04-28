@@ -58,7 +58,7 @@ public class AddAmountsController extends Register {
             Iterator iterator = jsonArray.iterator();
             while (iterator.hasNext()) {
                 JSONObject searchedUser = (JSONObject) iterator.next();
-                if (searchedUser.get("name").equals(searchCustomerField.getText())) {           //compare the input from the admin with the info in json file
+                if (searchedUser.get("username").equals(searchCustomerField.getText())) {           //compare the input from the admin with the info in json file
                     if (!addElectricityField.getText().isEmpty()) {
                         searchedUser.replace("electricity", addElectricityField.getText());         //replace the respective fields
                         repl++;                                                                     //if no field is filled, an alert will be displayed
@@ -76,6 +76,9 @@ public class AddAmountsController extends Register {
                         repl++;
                         break;
                     }
+                    alert.setAlertType(Alert.AlertType.INFORMATION);
+                    alert.setContentText("You added a new bill.");
+                    alert.show();
                     searched = 1;
                 }
 
@@ -89,7 +92,7 @@ public class AddAmountsController extends Register {
 
             if (repl == 0) {
                 alert.setAlertType(Alert.AlertType.WARNING);
-                alert.setContentText("You must fill at least one field");
+                alert.setContentText("You must fill at least one field!");
                 alert.show();
             }
 
